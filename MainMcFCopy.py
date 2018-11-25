@@ -19,14 +19,8 @@ class MyClient(discord.Client):
 client = MyClient()
 
 
-# This is a block of code that is triggered by an event that matches the lines inside it.
-# All it is doing is scanning the server for when a person sends our bot a message ('noob').
-# When it detects this event, it sends a message back.
-# NOTE: Special syntax: message.content.upper() == 'NOOB'. the periods between the words seem to
-# add specificity to the first word 'message', which is a defined variable. Also upper() == 'NOOB' allows
-# the bot to scan for the event in a way that is not case sensitive.
-# AWAIT is an important feature of ASYNC. Not sure if code works without it.
-# Next if statement of this block of code waits for the specific message '!ping' and responds back with
+
+# First if statement of this block of code waits for the specific message '!ping' and responds back with
 # the original author's handle and the word 'pong!' The <@%s> is a placeholder for the user specified after it.
 # Second if statement of this block creates a command that requires the key '!say'. After that, the if in
 # the next line looks for who is sending the command (me) to run the next code. Args can be any variable I want.
@@ -41,7 +35,13 @@ client = MyClient()
 # The next line I am unsure of the details about the syntax, but it is basically running a check with
 # the Discord database to see if your userID matches under a specified role in Discord.
 # Else statement triggers if there is no match.
-
+# This last block of code is triggered by an event that matches the lines inside it.
+# All it is doing is scanning the server for when a person sends our bot a message ('noob').
+# When it detects this event, it sends a message back.
+# NOTE: Special syntax: message.content.upper() == 'NOOB'. the periods between the words seem to
+# add specificity to the first word 'message', which is a defined variable. Also upper() == 'NOOB' allows
+# the bot to scan for the event in a way that is not case sensitive.
+# AWAIT is an important feature of ASYNC. Not sure if code works without it.
 
 @client.event
 async def on_message(message):
