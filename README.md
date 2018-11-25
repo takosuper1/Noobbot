@@ -1,0 +1,2 @@
+# Noobbot
+Discord Bot
